@@ -4,7 +4,7 @@
 #====================================================================
 # Run level information:
 # chkconfig: 2345 99 99
-# Description: vlmcsd-x64-musl-static
+# Description: vlmcsdmulti-x64-musl-static
 # processname: vlmcsd
 # Run "/sbin/chkconfig --add vlmcsd" to add the Run levels.
 #====================================================================
@@ -18,7 +18,7 @@
 # Check that networking is up.
 [ ${NETWORKING} ="yes" ] || exit 0
 
-BIN=/usr/local/bin/vlmcsd-x64-musl-static
+BIN=/usr/local/bin/vlmcsdmulti-x64-musl-static
 PID_DIR=/var/run
 PID_FILE=$PID_DIR/vlmcsd.pid
 RET_VAL=0
