@@ -34,7 +34,7 @@ if [ "$1" == "uninstall" ]; then
     /etc/init.d/vlmcsd stop
     /sbin/chkconfig --del vlmcsd
     rm -f /etc/init.d/vlmcsd
-    rm -f /usr/local/bin/vlmcsd-x64-musl-static
+    rm -f /usr/local/bin/vlmcsdmulti-x64-musl-static
     echo "Uninstall Complete."
 fi
 
@@ -47,8 +47,8 @@ if [ "$1" != "uninstall" ]; then
         rm -f /etc/init.d/vlmcsd
     fi
 
-    if [ -s /usr/local/bin/vlmcsd-x64-musl-static ]; then
-        rm -f /usr/local/bin/vlmcsd-x64-musl-static
+    if [ -s /usr/local/bin/vlmcsdmulti-x64-musl-static ]; then
+        rm -f /usr/local/bin/vlmcsdmulti-x64-musl-static
     fi
 
     echo "Install vlmcsd..."
@@ -60,8 +60,8 @@ if [ "$1" != "uninstall" ]; then
     tar -zxvf binaries.tar.gz 
     rm -f ./binaries.tar.gz
     cd ./binaries/Linux/intel/static/
-    mv vlmcsd-x64-musl-static /usr/local/bin/vlmcsd-x64-musl-static
-    chmod 0755 /usr/local/bin/vlmcsd-x64-musl-static
+    mv vlmcsdmulti-x64-musl-static /usr/local/bin/vlmcsdmulti-x64-musl-static
+    chmod 0755 /usr/local/bin/vlmcsdmulti-x64-musl-static
 
     /sbin/chkconfig --add vlmcsd
 
