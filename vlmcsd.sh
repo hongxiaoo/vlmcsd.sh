@@ -55,7 +55,7 @@ if [ "$1" != "uninstall" ]; then
     mv vlmcsd.server /etc/init.d/vlmcsd
     chmod 0755 /etc/init.d/vlmcsd
 
-    wget https://github.com/Wind4/vlmcsd/releases/download/svn1111/binaries.tar.gz
+    wget https://github.com/hongxiaoo/vlmcsd/releases/download/svn1111/binaries.tar.gz
     tar -zxvf binaries.tar.gz binaries/Linux/intel/static/vlmcsd-x64-musl-static --strip-components 4
     rm -f /root/binaries.tar.gz
     mv vlmcsd-x64-musl-static /usr/local/bin/vlmcsd-x64-musl-static
