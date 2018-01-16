@@ -14,8 +14,11 @@ Vlmcsd搭建KMS激活服务器一键脚本
 使用root用户登录，运行以下命令：
 
 wget -c https://raw.githubusercontent.com/hongxiaoo/vlmcsd.sh/master/vlmcsd.sh
+
 chmod +x vlmcsd.sh
+
 ./vlmcsd.sh 2>&1 | tee vlmcsd.log
+
 卸载方法：
 使用 root 用户登录，运行以下命令：
 
