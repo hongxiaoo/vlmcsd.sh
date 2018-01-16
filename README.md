@@ -23,13 +23,18 @@ chmod +x vlmcsd.sh
 使用 root 用户登录，运行以下命令：
 
 ./vlmcsd.sh uninstall
+
 安装完成后即已后台启动 vlmcsd ，运行：
 
 /etc/init.d/vlmcsd status
+
 使用命令：
 启动：/etc/init.d/vlmcsd start
+
 停止：/etc/init.d/vlmcsd stop
+
 重启：/etc/init.d/vlmcsd restart
+
 状态：/etc/init.d/vlmcsd status
 
 如果你的服务器开启了防火墙
@@ -37,4 +42,5 @@ chmod +x vlmcsd.sh
 请执行以下语句添加例外
 
 /sbin/iptables -I INPUT -p tcp --dport 1688 -j ACCEPT
+
 /sbin/iptables-save
