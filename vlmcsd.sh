@@ -52,12 +52,14 @@ if [ "$1" != "uninstall" ]; then
     fi
 
     echo "Install vlmcsd..."
+    wget -c https://raw.githubusercontent.com/hongxiaoo/vlmcsd.sh/master/vlmcsd.server
     mv vlmcsd.server /etc/init.d/vlmcsd
     chmod 0755 /etc/init.d/vlmcsd
 
     wget https://github.com/hongxiaoo/vlmcsd/releases/download/svn1111/binaries.tar.gz
-    tar -zxvf binaries.tar.gz binaries/Linux/intel/static/vlmcsd-x64-musl-static --strip-components 4
-    rm -f /root/binaries.tar.gz
+    tar -zxvf binaries.tar.gz 
+    rm -f ./binaries.tar.gz
+    cd ./binaries/Linux/intel/static/
     mv vlmcsd-x64-musl-static /usr/local/bin/vlmcsd-x64-musl-static
     chmod 0755 /usr/local/bin/vlmcsd-x64-musl-static
 
